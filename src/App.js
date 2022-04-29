@@ -78,15 +78,15 @@ function App() {
         </IconButton>
 
 
-        <Typography variant='h1' >0</Typography>
+        <Typography variant='h1' >{counter}</Typography>
 
         <Box sx={{display: "flex", justifyContent: "space-between", gap: "35px"}} >
 
-          <Button onClick={dispatch(decrease)} size='large' sx={{fontSize: "1.25rem"}} variant="contained" >
+          <Button onClick={()=>dispatch(decrease())} size='large' sx={{fontSize: "1.25rem"}} variant="contained" >
             -
           </Button>
 
-          <Button size='large' sx={{fontSize: "1.25rem"}} variant="contained" >
+          <Button onClick={()=>dispatch(increase())} size='large' sx={{fontSize: "1.25rem"}} variant="contained" >
             +
           </Button>
 

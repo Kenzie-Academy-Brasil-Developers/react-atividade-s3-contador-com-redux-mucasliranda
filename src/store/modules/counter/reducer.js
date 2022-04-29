@@ -1,14 +1,14 @@
 const reducerCounter = (state = 0, action) => {
+
   switch (action.type) {
     case "INCREASE":
-      state += 1
-      return state
+      return state + 1
     case "DECREASE":
-      state -= 1
-      return state
+      return state > 0 ? state - 1 : state
     default : 
       return state
   }
+  
 }
 
 export default reducerCounter
